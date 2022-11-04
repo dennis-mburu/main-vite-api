@@ -41,13 +41,13 @@ useEffect(()=>{
   )
  },[])
 // STAFF BOARD
-useEffect(()=>{
-  fetch("/api/staff")
-  .then(response =>response.json())
-  .then((pboard)=>
-  setParentBoard(pboard)
-  )
- },[])
+// useEffect(()=>{}
+//   fetch("/api/staff")
+//   .then(response =>response.json())
+//   .then((pboard)=>
+//   setParentBoard(pboard)
+//   )
+//  },[])
   return (
     <div className="bigParent">
       <Grid container>
