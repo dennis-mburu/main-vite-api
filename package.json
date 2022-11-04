@@ -1,0 +1,13 @@
+{
+  "name": "Edupo School Management System",
+  "description": "Build scripts for Heroku",
+  "engines": {
+    "node": "16.x"
+  },
+  "scripts": {
+    "build": "npm install --prefix client --legacy-peer-deps && npm run build --prefix client",
+    "clean": "rm -rf public",
+    "deploy": "cp -a client/dist/. public/",
+    "heroku-postbuild": "npm run clean && npm run build && npm run deploy"
+  }
+}
