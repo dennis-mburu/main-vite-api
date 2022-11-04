@@ -7,7 +7,7 @@ function Navbar({ user, setUser }) {
   function handleLogout() {
     switch (user.role) {
       case "admin":
-        fetch("/admin_logout", {
+        fetch("/api/admin_logout", {
           method: "DELETE",
         }).then((r) => {
           if (r.ok) {
@@ -17,7 +17,7 @@ function Navbar({ user, setUser }) {
         });
         break;
       case "teacher":
-        fetch("/teacher_logout", {
+        fetch("/api/teacher_logout", {
           method: "DELETE",
         }).then((r) => {
           if (r.ok) {
@@ -27,7 +27,7 @@ function Navbar({ user, setUser }) {
         });
         break;
       case "student":
-        fetch("/student_logout", {
+        fetch("/api/student_logout", {
           method: "DELETE",
         }).then((r) => {
           if (r.ok) {
@@ -38,7 +38,7 @@ function Navbar({ user, setUser }) {
         });
         break;
       case "parent":
-        fetch("/parent_logout", {
+        fetch("/api/parent_logout", {
           method: "DELETE",
         }).then((r) => {
           if (r.ok) {

@@ -13,7 +13,7 @@ function MyAssignments() {
   const [assignments, setAssignments] = useState([]);
 
   useEffect(() => {
-    fetch("logged_student_assignments")
+    fetch("/api/logged_student_assignments")
       .then((res) => res.json())
       .then((data) => {
         setAssignments(data);

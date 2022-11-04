@@ -33,7 +33,7 @@ function StudentForm() {
     console.log("form");
 
     axios
-      .post("/students", {
+      .post("/api/students", {
         gender: data.gender,
         image: data.image,
         parent_id: data.parent_id,

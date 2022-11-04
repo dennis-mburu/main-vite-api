@@ -26,7 +26,7 @@ function TeacherEditForm() {
   });
 
   useEffect(() => {
-    fetch(`/teachers/${id}`)
+    fetch(`/api/teachers/${id}`)
       .then((res) => res.json())
       .then((teacher) => {
         setTeacher(
@@ -44,7 +44,7 @@ function TeacherEditForm() {
     console.log("form");
 
     axios
-        .patch(`/teachers/${id}`, {
+        .patch(`/api/teachers/${id}`, {
         gender: teacher.gender,
         image: teacher.image,
         phone_no: teacher.phone_no,

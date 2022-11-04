@@ -18,7 +18,7 @@ const [parentBoard, setParentBoard]=useState([])
 const [staffBoard, setStaffBoard]=useState([])
 // TEACHER BOARD
 useEffect(()=>{
- fetch("/teachers")
+ fetch("/api/teachers")
  .then(response =>response.json())
  .then((tboard)=>
  setTeacherBoard(tboard)
@@ -26,7 +26,7 @@ useEffect(()=>{
 },[])
 // STUDENT BOARD
 useEffect(()=>{
-  fetch("/students")
+  fetch("/api/students")
   .then(response =>response.json())
   .then((sboard)=>
   setStudentBoard(sboard)
@@ -34,7 +34,7 @@ useEffect(()=>{
  },[])
 // PARENT BOARD
 useEffect(()=>{
-  fetch("/parents")
+  fetch("/api/parents")
   .then(response =>response.json())
   .then((pboard)=>
   setParentBoard(pboard)
@@ -42,7 +42,7 @@ useEffect(()=>{
  },[])
 // STAFF BOARD
 useEffect(()=>{
-  fetch("/staff")
+  fetch("/api/staff")
   .then(response =>response.json())
   .then((pboard)=>
   setParentBoard(pboard)

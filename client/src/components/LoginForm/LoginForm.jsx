@@ -46,7 +46,7 @@ function LoginForm({ setUser }) {
   };
   function handleAdminSubmit(e) {
     e.preventDefault();
-    fetch("/admin_login", {
+    fetch("/api/admin_login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -68,7 +68,7 @@ function LoginForm({ setUser }) {
   }
   function handleTeacherSubmit(e) {
     e.preventDefault();
-    fetch("/teacher_login", {
+    fetch("/api/teacher_login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -90,7 +90,7 @@ function LoginForm({ setUser }) {
   }
   function handleStudentSubmit(e) {
     e.preventDefault();
-    fetch("/student_login", {
+    fetch("/api/student_login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -113,7 +113,7 @@ function LoginForm({ setUser }) {
   }
   function handleParentSubmit(e) {
     e.preventDefault();
-    fetch("/parent_login", {
+    fetch("/api/parent_login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

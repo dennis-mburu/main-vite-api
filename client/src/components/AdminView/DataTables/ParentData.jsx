@@ -28,7 +28,7 @@ function ParentData() {
   const [errors, setErrors] = useState([]);
 
   useEffect(() => {
-    fetch("/parents")
+    fetch("/api/parents")
       .then((response) => response.json())
       .then((person) =>
         // console.log(person)
@@ -37,7 +37,7 @@ function ParentData() {
   }, []);
 
   function handleParentDelete(id) {
-    fetch(`/parents/${id}`, {
+    fetch(`/api/parents/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

@@ -31,7 +31,7 @@ function TeacherForm() {
     console.log("form");
 
     axios
-      .post("/teachers", {
+      .post("/api/teachers", {
         gender: teacher.gender,
         image: teacher.image,
         phone_no: teacher.phone_no,

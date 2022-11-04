@@ -27,7 +27,7 @@ function ParentForm() {
     console.log("form");
 
     axios
-      .post("/parents", {
+      .post("/api/parents", {
         address: parent.address,
         phone_no: parent.phone_no,
         full_name: parent.full_name,

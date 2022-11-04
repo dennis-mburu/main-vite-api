@@ -23,7 +23,7 @@ function SubjectStudents() {
   const [subjectName, setSubjectName] = useState("undefined");
 
   useEffect(() => {
-    fetch(`/subject_students/${id}`)
+    fetch(`/api/subject_students/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setStudents(data);

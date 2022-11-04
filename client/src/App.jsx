@@ -44,7 +44,7 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("/admin_auth").then((r) => {
+    fetch("/api/admin_auth").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }
@@ -52,7 +52,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("/teacher_auth").then((r) => {
+    fetch("/api/teacher_auth").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }
@@ -60,7 +60,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("/student_auth").then((r) => {
+    fetch("/api/student_auth").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }
@@ -68,7 +68,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    fetch("/parent_auth").then((r) => {
+    fetch("/api/parent_auth").then((r) => {
       if (r.ok) {
         r.json().then((user) => setUser(user));
       }

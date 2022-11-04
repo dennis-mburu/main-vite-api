@@ -12,7 +12,7 @@ function ParentView() {
   const [students, setStudents] = useState([])
 
   useEffect(() => {
-    fetch("/student_parent")
+    fetch("/api/student_parent")
       .then((res) => res.json())
       .then((data) => {
         setStudents(data);

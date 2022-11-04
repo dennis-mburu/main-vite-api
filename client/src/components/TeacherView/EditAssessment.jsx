@@ -16,7 +16,7 @@ function EditAssessment() {
   const [total, setTotal] = useState(100);
 
   useEffect(() => {
-    fetch(`/assessments/${id}`)
+    fetch(`/api/assessments/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setName(data.name);
@@ -26,7 +26,7 @@ function EditAssessment() {
 
   function handleAssessmentSubmit(e) {
     e.preventDefault();
-    fetch(`/assessments/${id}`, {
+    fetch(`/api/assessments/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

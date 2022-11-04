@@ -16,7 +16,7 @@ function ParentStudentAssignments() {
   const [assignments, setAssignments] = useState([]);
 
   useEffect(() => {
-    fetch(`/par_stu_assignments/${id}`)
+    fetch(`/api/par_stu_assignments/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setAssignments(data);

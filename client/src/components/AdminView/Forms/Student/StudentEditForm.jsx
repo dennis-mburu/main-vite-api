@@ -29,7 +29,7 @@ function StudentEditForm() {
 
 
   useEffect(() => {
-    fetch(`/students/${id}`)
+    fetch(`/api/students/${id}`)
       .then((res) => res.json())
       .then((student) => {
         // console.log(student)
@@ -55,7 +55,7 @@ function StudentEditForm() {
     console.log("form");
 
     axios
-      .patch(`/students/${id}`, {
+      .patch(`/api/students/${id}`, {
         gender: data.gender,
         image: data.image,
         parent_id: data.parent_id,

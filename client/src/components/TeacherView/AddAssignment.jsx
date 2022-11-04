@@ -29,7 +29,7 @@ function AddAssignment() {
   const [due_date, setDate] = useState("2022-11-04");
 
   useEffect(() => {
-    fetch(`/subject_assignments/${id}`)
+    fetch(`/api/subject_assignments/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setAssignments(data);
@@ -39,7 +39,7 @@ function AddAssignment() {
 
   function handleAssignmentSubmit(e) {
     e.preventDefault();
-    fetch("/assignments", {
+    fetch("/api/assignments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -63,7 +63,7 @@ function AddAssignment() {
   }
 
   function handleAssignmentDelete(id) {
-    fetch(`/assignments/${id}`, {
+    fetch(`/api/assignments/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

@@ -21,7 +21,7 @@ function TeacherView() {
   const [errors, setErrors] = useState([]);
 
   useEffect(() => {
-    fetch("/teacher_subjects")
+    fetch("/api/teacher_subjects")
       .then((res) => res.json())
       .then((data) => {
         setSubjects(data);
@@ -31,7 +31,7 @@ function TeacherView() {
 
   function handleSubjectSubmit(e) {
     e.preventDefault();
-    fetch("/new_subject_teacher", {
+    fetch("/api/new_subject_teacher", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ function TeacherView() {
   }
 
   function handleSubjectRemove(id) {
-    fetch(`/subject_teachers/${id}`, {
+    fetch(`/api/subject_teachers/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

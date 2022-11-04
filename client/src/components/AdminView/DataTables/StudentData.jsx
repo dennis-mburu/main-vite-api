@@ -26,7 +26,7 @@ function StudentData() {
 
 
   useEffect(() => {
-    fetch("/students")
+    fetch("/api/students")
       .then((response) => response.json())
       .then((human) => {
         setStudentData(human)
@@ -35,7 +35,7 @@ function StudentData() {
   }, []);
  
   function handleStudentDelete(id){
-    fetch(`/students/${id}`, {
+    fetch(`/api/students/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

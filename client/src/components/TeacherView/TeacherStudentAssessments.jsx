@@ -25,7 +25,7 @@ function TeacherStudentAssessments() {
   const [subject, setSubject] = useState("");
 
   useEffect(() => {
-    fetch(`/par_stu_assesments/${id}`)
+    fetch(`/api/par_stu_assesments/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setAssesments(data);
@@ -33,12 +33,12 @@ function TeacherStudentAssessments() {
   }, []);
 
   useEffect(() => {
-    fetch(`/students/${id}`)
+    fetch(`/api/students/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setStudent(data.full_name);
         setSubject(data.subject);
-        fetch(`/subject_assessments/${data.subject_id}`)
+        fetch(`/api/subject_assessments/${data.subject_id}`)
           .then((res) => res.json())
           .then((data) => {
             setSubjectAssesments(data);
@@ -48,7 +48,7 @@ function TeacherStudentAssessments() {
 
   function handleAddStudentAnAssesment(e) {
     e.preventDefault();
-    fetch("/student_assesments", {
+    fetch("/api/student_assesments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -69,7 +69,7 @@ function TeacherStudentAssessments() {
   }
 
   function handleAssesmentDelete(id) {
-    fetch(`/student_assesments/${id}`, {
+    fetch(`/api/student_assesments/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

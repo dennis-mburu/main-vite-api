@@ -14,7 +14,7 @@ function ChangeAssignmentScore() {
     const [score, setScore] = useState(0);
   
     useEffect(() => {
-      fetch(`/student_assignments/${id}`)
+      fetch(`/api/student_assignments/${id}`)
         .then((res) => res.json())
         .then((data) => {
           setAssignment(data);
@@ -24,7 +24,7 @@ function ChangeAssignmentScore() {
   
     function handleScoreSubmit(e){
       e.preventDefault()
-      fetch(`/student_assignments/${id}`, {
+      fetch(`/api/student_assignments/${id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",

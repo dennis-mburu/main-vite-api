@@ -21,7 +21,7 @@ function ParentEditForm() {
   });
 
   useEffect(() => {
-    fetch(`/parents/${id}`)
+    fetch(`/api/parents/${id}`)
       .then((res) => res.json())
       .then((parent) => {
         setParent(parent);
@@ -38,7 +38,7 @@ function ParentEditForm() {
     console.log("form");
 
     axios
-      .patch(`/parents/${id}`, {
+      .patch(`/api/parents/${id}`, {
         address: parent.address,
         phone_no: parent.phone_no,
         full_name: parent.full_name,

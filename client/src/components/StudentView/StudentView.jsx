@@ -10,7 +10,7 @@ function StudentView() {
   const [student, setStudent] = useState({})
   useEffect(() => {
     console.log("whYY")
-    fetch("studentId")
+    fetch("/api/studentId")
       .then((res) => res.json())
       .then((data) => {
         setStudent(data);

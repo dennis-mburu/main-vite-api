@@ -26,7 +26,7 @@ function TeacherStudentAssignments() {
   const [subject, setSubject] = useState("");
 
   useEffect(() => {
-    fetch(`/par_stu_assignments/${id}`)
+    fetch(`/api/par_stu_assignments/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setAssignments(data);
@@ -34,12 +34,12 @@ function TeacherStudentAssignments() {
   }, []);
 
   useEffect(() => {
-    fetch(`/students/${id}`)
+    fetch(`/api/students/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setStudent(data.full_name);
         setSubject(data.subject);
-        fetch(`/subject_assignments/${data.subject_id}`)
+        fetch(`/api/subject_assignments/${data.subject_id}`)
           .then((res) => res.json())
           .then((data) => {
             setSubjectAssignments(data);
@@ -49,7 +49,7 @@ function TeacherStudentAssignments() {
 
   function handleAddStudentAnAssignment(e) {
     e.preventDefault();
-    fetch("/student_assignments", {
+    fetch("/api/student_assignments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -70,7 +70,7 @@ function TeacherStudentAssignments() {
   }
 
   function handleAssignmentDelete(id) {
-    fetch(`/student_assignments/${id}`, {
+    fetch(`/api/student_assignments/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

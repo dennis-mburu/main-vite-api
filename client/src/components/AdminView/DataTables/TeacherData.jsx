@@ -25,13 +25,13 @@ function TeacherData() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("/teachers")
+    fetch("/api/teachers")
       .then((response) => response.json())
       .then((human) => setTeacherData(human));
   }, []);
 
   function handleTeacherDelete(id) {
-    fetch(`/teachers/${id}`, {
+    fetch(`/api/teachers/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

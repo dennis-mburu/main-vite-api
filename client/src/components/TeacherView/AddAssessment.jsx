@@ -28,7 +28,7 @@ function AddAssessment() {
   const [total, setTotal] = useState(100);
 
   useEffect(() => {
-    fetch(`/subject_assessments/${id}`)
+    fetch(`/api/subject_assessments/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setAssessments(data);
@@ -38,7 +38,7 @@ function AddAssessment() {
 
   function handleAssessmentSubmit(e) {
     e.preventDefault();
-    fetch("/assessments", {
+    fetch("/api/assessments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -62,7 +62,7 @@ function AddAssessment() {
   }
 
   function handleAssessmentDelete(id) {
-    fetch(`/assessments/${id}`, {
+    fetch(`/api/assessments/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

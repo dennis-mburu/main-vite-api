@@ -16,7 +16,7 @@ function EditAssignment() {
   const [due_date, setDate] = useState("");
 
   useEffect(() => {
-    fetch(`/assignments/${id}`)
+    fetch(`/api/assignments/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setName(data.name);
@@ -26,7 +26,7 @@ function EditAssignment() {
 
   function handleAssignmentSubmit(e) {
     e.preventDefault();
-    fetch(`/assignments/${id}`, {
+    fetch(`/api/assignments/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
