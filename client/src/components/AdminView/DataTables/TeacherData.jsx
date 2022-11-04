@@ -19,8 +19,11 @@ import {
 import { Delete, Edit } from "@material-ui/icons";
 import { useNavigate } from "react-router-dom";
 
+
 function TeacherData() {
   const [teacherData, setTeacherData] = useState([]);
+const [errors, setErrors] = useState([]);
+
 
   const navigate = useNavigate();
 
