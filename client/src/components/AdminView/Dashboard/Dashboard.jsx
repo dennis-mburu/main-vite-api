@@ -147,6 +147,9 @@ useEffect(()=>{
                   <span className="title">STAFF</span>
                 </div>
                 <div className="number">
+                  <span className="nambari">1</span>
+                </div>
+                {/* <div className="number">
                 {staffBoard.slice(-1).map((staffboard,index)=>{
                   return(
                   <div key={index}>
@@ -154,7 +157,7 @@ useEffect(()=>{
                   </div>
                   )
                 })}
-                </div>
+                </div> */}
                 <div className="ona">
                   <span className="link">See all</span>
                 </div>
