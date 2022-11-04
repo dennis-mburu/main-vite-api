@@ -5,47 +5,47 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/admin_login": {
+      "/api/admin_login": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/admin_logout": {
+      "/api/admin_logout": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/admin_auth": {
+      "/api/admin_auth": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/teacher_login": {
+      "/api/teacher_login": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/teacher_logout": {
+      "/api/teacher_logout": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/teacher_auth": {
+      "/api/teacher_auth": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/student_login": {
+      "/api/student_login": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/student_logout": {
+      "/api/student_logout": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/student_auth": {
+      "/api/student_auth": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
@@ -55,97 +55,97 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
       },
-      "/parent_logout": {
+      "/api/parent_logout": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/parent_auth": {
+      "/api/parent_auth": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/student_parent": {
+      "/api/student_parent": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/students": {
+      "/api/students": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/par_stu_assesments": {
+      "/api/par_stu_assesments": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/par_stu_assignments": {
+      "/api/par_stu_assignments": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/teacher_subjects": {
+      "/api/teacher_subjects": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/subject_students": {
+      "/api/subject_students": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/student_assesments": {
+      "/api/student_assesments": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/student_assignments": {
+      "/api/student_assignments": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/subject_assignments": {
+      "/api/subject_assignments": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/subject_assessments": {
+      "/api/subject_assessments": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/assignments": {
+      "/api/assignments": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/assessments": {
+      "/api/assessments": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/logged_student_assignments": {
+      "/api/logged_student_assignments": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/logged_student_assessments": {
+      "/api/logged_student_assessments": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/new_subject_teacher": {
+      "/api/new_subject_teacher": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/subject_teachers": {
+      "/api/subject_teachers": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/parents": {
+      "/api/parents": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
@@ -155,12 +155,12 @@ export default defineConfig({
         changeOrigin: true,
         secure: false,
       },
-      "/studentId": {
+      "/api/studentId": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
       },
-      "/staffs": {
+      "/api/staffs": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
