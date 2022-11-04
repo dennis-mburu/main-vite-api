@@ -1,4 +1,4 @@
-class SubjectsController < ApplicationController
+class Api::SubjectsController < ApplicationController
 
     # before_action :set_subject, only: [:show, :edit, :update, :destroy]
     def index

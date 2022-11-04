@@ -1,4 +1,4 @@
-class ParentSessionsController < ApplicationController
+class Api::ParentSessionsController < ApplicationController
 
     def create
         parent = Parent.find_by(username: params[:username])

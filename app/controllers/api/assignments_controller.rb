@@ -1,4 +1,4 @@
-class AssignmentsController < ApplicationController
+class Api::AssignmentsController < ApplicationController
 # before_action :set_assignment, only: [:show, :edit, :update, :destroy]
 rescue_from ActiveRecord::RecordNotFound, with: :render_record_not_found
 rescue_from ActiveRecord::RecordInvalid, with: :render_unproccessable_entity

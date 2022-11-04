@@ -1,4 +1,4 @@
-class PersistenceController < ApplicationController
+class Api::PersistenceController < ApplicationController
     def admin
         admin = Admin.find_by(id: session[:admin_id])
         if admin

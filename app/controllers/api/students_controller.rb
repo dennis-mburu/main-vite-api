@@ -1,4 +1,4 @@
-class StudentsController < ApplicationController
+class Api::StudentsController < ApplicationController
   # before_action :set_student, only: [:show, :edit, :update, :destroy]
 
   rescue_from ActiveRecord::RecordInvalid, with: :render_unproccessable_entity

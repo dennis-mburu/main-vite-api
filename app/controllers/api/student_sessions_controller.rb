@@ -1,4 +1,4 @@
-class StudentSessionsController < ApplicationController
+class Api::StudentSessionsController < ApplicationController
     #skip_before_action :authorize, only: [:index, :create]
     #before_action :authorize
     def create

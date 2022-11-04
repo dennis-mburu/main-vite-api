@@ -1,4 +1,4 @@
-class TeacherSessionsController < ApplicationController
+class Api::TeacherSessionsController < ApplicationController
 
     def create
         teacher = Teacher.find_by(username: params[:username])

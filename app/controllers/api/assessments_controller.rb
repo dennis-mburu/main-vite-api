@@ -1,4 +1,4 @@
-class AssessmentsController < ApplicationController
+class Api::AssessmentsController < ApplicationController
     # before_action :set_grade, only: [:show, :edit, :update, :destroy]
     rescue_from ActiveRecord::RecordNotFound, with: :render_record_not_found
     rescue_from ActiveRecord::RecordInvalid, with: :render_unproccessable_entity

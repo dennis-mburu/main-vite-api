@@ -1,4 +1,4 @@
-class StaffsController < ApplicationController
+class Api::StaffsController < ApplicationController
     #GET
     def index
           staffs = Staff.all

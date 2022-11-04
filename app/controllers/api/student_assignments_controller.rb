@@ -1,4 +1,4 @@
-class StudentAssignmentsController < ApplicationController
+class Api::StudentAssignmentsController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_record_not_found
     rescue_from ActiveRecord::RecordInvalid, with: :render_unproccessable_entity
 

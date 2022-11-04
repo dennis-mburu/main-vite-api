@@ -1,4 +1,4 @@
-class ParentsController < ApplicationController
+class Api::ParentsController < ApplicationController
   # before_action :set_parent, only: [:show, :edit, :update, :destroy]
   def index
       parents = Parent.all
